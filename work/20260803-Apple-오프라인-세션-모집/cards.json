@@ -1,6 +1,6 @@
 {
   "handle": "erai_log",
-  "style": "01_sky",
+  "style": "02_photo",
   "source": {
     "url": "https://www.univstore.com/event/20260720_apple_offlinesession",
     "title": "Hello, Mac. — Apple Korea x 에브리유니즈 MacBook Neo 활용 세션 모집",
@@ -47,6 +47,10 @@
       "tags": ["#대외활동", "#맥북무상대여", "#AppleKorea"],
       "title": "*맥북*을 6주간\n공짜로 써본다",
       "sub": "Apple Korea x 에브리유니즈,\nMac 처음 써보는 대학생 24명 모집",
+      "image": "bright3.jpg",
+      "focusX": 55,
+      "focusY": 35,
+      "zoom": 1.15,
       "imagePrompt": "A closed MacBook laptop on a clean minimal desk, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
@@ -54,6 +58,8 @@
       "label": "참여대상",
       "headline": "*Mac 한 번도* 안 써봤다면",
       "body": "Mac을 아직 안 써본 대학생·대학원생이 대상이다.\n에브리유니즈 인증과 광고성 정보 수신동의가 필요하다.",
+      "image": "bright1.jpg",
+      "focusY": 40,
       "imagePrompt": "A university student's desk with a notebook and coffee cup, no laptop visible, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
@@ -61,6 +67,9 @@
       "label": "혜택",
       "headline": "*6주* 무상 대여 + 미션",
       "body": "MacBook Neo를 세션 기간 동안 공짜로 빌려준다.\n캠퍼스 라이프를 콘텐츠로 만들어 SNS에 올리는 미션이 이어지고, 우수 크리에이터는 따로 시상한다.",
+      "image": "mac_card4.jpg",
+      "scrim": 0.86,
+      "blur": 10,
       "imagePrompt": "An open laptop screen glowing softly with abstract colorful shapes, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
@@ -68,6 +77,8 @@
       "label": "일정",
       "headline": "*24명*만 뽑는다",
       "body": "모집 7/20~8/9, 발표는 8/14(금).\n1차 세션 8/21(금), 2차 세션 10/1(목) — 서울 강남 ASEM타워에서 열린다.",
+      "image": "bright4.jpg",
+      "focusY": 60,
       "imagePrompt": "A minimal desk calendar with a few days softly marked, blurred bright window in the background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
@@ -75,6 +86,8 @@
       "label": "유의사항",
       "headline": "*신분증*은 필수다",
       "body": "세션 당일 실물 신분증 없으면 입장이 제한된다.\n기기는 본인만 쓸 수 있고 양도·판매는 금지, 파손 시 비용이 청구될 수 있다.",
+      "image": "mac_card3.jpg",
+      "focusY": 45,
       "imagePrompt": "A blank ID card and lanyard placed neatly on a light desk, soft sky blue and white palette, airy natural light, minimal composition, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
@@ -82,6 +95,9 @@
       "label": "지원방법",
       "headline": "인증하고 폼으로 *신청*",
       "body": "에브리유니즈 인증을 마친 뒤 전용 폼으로 신청한다.\n1·2차 세션과 시상식에 모두 참석 가능해야 한다.",
+      "image": "bright2.jpg",
+      "focusY": 20,
+      "zoom": 1.2,
       "imagePrompt": "A hand holding a smartphone with a blank bright screen showing a simple form, clean minimal desk background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
     },
     {
