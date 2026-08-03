@@ -21,8 +21,25 @@
       "Bash(node --check app/server.mjs)",
       "Bash(powershell -Command \"Stop-Process -Id 23260 -Force\")",
       "Bash(node app/render.mjs \"20260722-ASML-Korea-2026-캠퍼스-프로모터-2\")",
-      "Bash(powershell -Command \"Stop-Process -Id 28932 -Force\")"
-    ]
+      "Bash(powershell -Command \"Stop-Process -Id 28932 -Force\")",
+      "Bash(node app/telegram.mjs *)",
+      "Bash(TELEGRAM_BOT_TOKEN=* node *)",
+      "Bash(node app/render.mjs *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push*)",
+      "Bash(git log*)",
+      "Bash(git ls-remote*)",
+      "Bash(git status*)",
+      "Bash(curl * api.telegram.org*)",
+      "WebFetch(domain:linkareer.com)",
+      "WebFetch(domain:univstore.com)",
+      "WebFetch(domain:www.univstore.com)",
+      "WebFetch(domain:image.univstore.com)",
+      "Write(work/**)",
+      "Edit(work/**)"
+    ],
+    "defaultMode": "bypassPermissions"
   },
   "hooks": {
     "SessionStart": [

@@ -1,0 +1,99 @@
+{
+  "handle": "erai_log",
+  "style": "01_sky",
+  "source": {
+    "url": "https://www.univstore.com/event/20260720_apple_offlinesession",
+    "title": "Hello, Mac. — Apple Korea x 에브리유니즈 MacBook Neo 활용 세션 모집",
+    "publisher": "에브리유니즈"
+  },
+  "caption": "Mac 한 번도 안 써봤다면, 6주 동안 공짜로 써볼 기회예요 💻\n\nApple Korea와 에브리유니즈가 함께하는 \"Hello, Mac\" 세션, Mac 미보유·미사용 대학생 24명을 모집합니다.\n\n· 참여대상 Mac 미보유·미사용 대학생·대학원생 (에브리유니즈 인증 필요)\n· 혜택 MacBook Neo 6주간 무상 대여, 크리에이티브 미션, 우수 크리에이터 시상\n· 모집기간 7/20(월) ~ 8/9(일)\n· 발표 8/14(금) 오후 4시\n· 1차 세션 8/21(금), 2차 세션 10/1(목) — 서울 강남 ASEM타워\n\n⚠️ 세션 당일 실물 신분증 꼭 챙기세요. 기기는 본인만 쓸 수 있고 양도·판매는 금지, 파손 시 비용이 청구될 수 있어요. 업로드한 콘텐츠는 최소 6개월 공개 유지해야 합니다.\n\n신청은 에브리유니즈 인증 후 전용 폼으로 진행됩니다.\n\n마감까지 6일 남았어요. 지금 확인하세요 🙌\n대외활동 소식은 @erai_log 에서 정리해서 올립니다.\n\n출처 · 에브리유니즈(univstore.com)\n\n#대외활동 #대외활동추천 #대외활동맞팔 #서포터즈 #맥북 #MacBookNeo #Apple #대학생대외활동 #크리에이터모집 #무상대여 #대학생 #체험단",
+  "brief": {
+    "참여대상": "Mac 미보유·미사용 대학생/대학원생 (재학·휴학·졸업예정 가능), 에브리유니즈 인증 완료 + 광고성 정보 수신동의 완료 고객",
+    "모집인원": "24명",
+    "모집기간": "2026.7.20(월) ~ 8.9(일)",
+    "합격자발표": "2026.8.14(금) 오후 4시",
+    "세션일정": {
+      "1차": "2026.8.21(금) 오전 10:30 ~ 오후 5시",
+      "2차": "2026.10.1(목) 오후 7시 ~ 9시"
+    },
+    "장소": "서울시 강남구 ASEM타워",
+    "혜택": [
+      "MacBook Neo 6주간 무상 대여",
+      "크리에이티브 미션 (캠퍼스 라이프 콘텐츠 제작 + SNS 업로드)",
+      "우수 크리에이터 어워즈 (특별 시상 + 리워드)"
+    ],
+    "참여조건": [
+      "Mac 미보유 및 미사용 대학생",
+      "세션·시상식 양일 모두 참석 가능",
+      "미션 성실 수행",
+      "기기 대여·반납 동의",
+      "SNS 활동이 활발한 사람"
+    ],
+    "지원방법": "에브리유니즈 인증 후 전용 폼(form.univstore.com) 신청",
+    "주의사항": [
+      "세션 당일 실물 신분증 필수 지참, 미지참 시 입장 제한",
+      "기기는 본인만 사용, 양도·대여·판매 금지",
+      "사용자 과실로 인한 분실·파손 시 비용 청구 가능",
+      "반납 전 개인 데이터 백업 및 기기 초기화 필요, 10/1 2차 세션에 반납",
+      "업로드 콘텐츠 최소 6개월 이상 공개 유지",
+      "미션 콘텐츠는 에브리유니즈·Apple Korea 마케팅에 활용될 수 있음",
+      "#협찬 #에브리유니즈 등 대가성 표기 필수"
+    ]
+  },
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "RECRUIT · D-6",
+      "tags": ["#대외활동", "#맥북무상대여", "#AppleKorea"],
+      "title": "*맥북*을 6주간\n공짜로 써본다",
+      "sub": "Apple Korea x 에브리유니즈,\nMac 처음 써보는 대학생 24명 모집",
+      "imagePrompt": "A closed MacBook laptop on a clean minimal desk, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "참여대상",
+      "headline": "*Mac 한 번도* 안 써봤다면",
+      "body": "Mac을 아직 안 써본 대학생·대학원생이 대상이다.\n에브리유니즈 인증과 광고성 정보 수신동의가 필요하다.",
+      "imagePrompt": "A university student's desk with a notebook and coffee cup, no laptop visible, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "혜택",
+      "headline": "*6주* 무상 대여 + 미션",
+      "body": "MacBook Neo를 세션 기간 동안 공짜로 빌려준다.\n캠퍼스 라이프를 콘텐츠로 만들어 SNS에 올리는 미션이 이어지고, 우수 크리에이터는 따로 시상한다.",
+      "imagePrompt": "An open laptop screen glowing softly with abstract colorful shapes, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "일정",
+      "headline": "*24명*만 뽑는다",
+      "body": "모집 7/20~8/9, 발표는 8/14(금).\n1차 세션 8/21(금), 2차 세션 10/1(목) — 서울 강남 ASEM타워에서 열린다.",
+      "imagePrompt": "A minimal desk calendar with a few days softly marked, blurred bright window in the background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "유의사항",
+      "headline": "*신분증*은 필수다",
+      "body": "세션 당일 실물 신분증 없으면 입장이 제한된다.\n기기는 본인만 쓸 수 있고 양도·판매는 금지, 파손 시 비용이 청구될 수 있다.",
+      "imagePrompt": "A blank ID card and lanyard placed neatly on a light desk, soft sky blue and white palette, airy natural light, minimal composition, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "지원방법",
+      "headline": "인증하고 폼으로 *신청*",
+      "body": "에브리유니즈 인증을 마친 뒤 전용 폼으로 신청한다.\n1·2차 세션과 시상식에 모두 참석 가능해야 한다.",
+      "imagePrompt": "A hand holding a smartphone with a blank bright screen showing a simple form, clean minimal desk background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "대외활동 소식,\n*여기서* 받아보세요",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": ["#대외활동", "#대외활동맞팔"]
+    }
+  ]
+}
