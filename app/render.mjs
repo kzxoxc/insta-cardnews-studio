@@ -14,9 +14,14 @@ export const WORK = join(ROOT, 'work');
 const BUILD = join(ROOT, 'build');
 const FONTS = join(BUILD, 'fonts');
 
+// Windows 로컬 + 리눅스 클라우드(예약 작업) 양쪽 다 지원한다
 const CHROME = [
   'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
   'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+  '/usr/bin/google-chrome',
+  '/usr/bin/google-chrome-stable',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
 ].find(existsSync);
 
 /** 렌더용 폰트·자산 경로 — file:/// 절대경로여야 헤드리스에서 잡힌다 */
