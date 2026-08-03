@@ -1,0 +1,131 @@
+{
+  "handle": "erai_log",
+  "style": "02_photo",
+  "source": {
+    "url": "https://linkareer.com/activity/336340",
+    "title": "[CJ대한통운] CJ LOGISTICS 대학생 앰버서더 3기 모집(~8/2)",
+    "publisher": "링커리어"
+  },
+  "brief": {
+    "정의": "CJ대한통운의 물류기술·채용소식을 SNS 콘텐츠로 제작하는 대학생 홍보대사",
+    "활동일정": {
+      "서류지원": "7/20(월) ~ 8/2(일)",
+      "서류발표": "8/4(화)",
+      "면접전형": "8/6(목) ~ 8/7(금)",
+      "합격발표": "8/12(수)",
+      "발대식": "8/21(금) — 참석 필수"
+    },
+    "모집대상": "국내 대학교(원) 재학생 및 휴학생 (전공 무관)",
+    "활동기간": "2026년 8월 ~ 11월 (4개월)",
+    "활동내용": [
+      "SNS 콘텐츠 제작",
+      "월 2회 대면 활동 (참석 필수)"
+    ],
+    "혜택": [
+      "공식 수료증 발급",
+      "활동비 지원 및 우수성과 시상",
+      "공채 지원 시 서류전형 가산점 부여"
+    ],
+    "지원방법": {
+      "접수": "CJ대한통운 채용 홈페이지 온라인 접수 (cjlrecruit.com)",
+      "제출": "자기소개서 및 사전 과제 제출 필수",
+      "과제주제": "2026 CJ대한통운 하반기 신입공채 모집 홍보영상",
+      "과제형식": "MP4 또는 MOV 영상 (세로형 숏폼)",
+      "과제분량": "45초 ~ 1분 내외"
+    },
+    "주의사항": [
+      "인물 촬영 시 사전 초상권 허가 확인 필수",
+      "BGM·이미지·폰트·영상 클립은 저작권을 침해하지 않는 자료만 사용",
+      "CJ대한통운 공식 유튜브 채널 내 영상은 활용 가능"
+    ],
+    "확인메모": "포스터에는 접수처가 CJRECRUIT.COM 으로 적혀 있으나, 실제 CJ대한통운 채용 홈페이지는 cjlrecruit.com (사이트 제목으로 확인). 포스터 오타로 판단."
+  },
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "RECRUIT · 2026",
+      "tags": [
+        "#대외활동",
+        "#앰버서더",
+        "#CJ대한통운"
+      ],
+      "title": "\nCJ대한통운\n앰버서더 *3기*",
+      "sub": "물류기술과 채용 소식을\nSNS 콘텐츠로 만드는 홍보대사",
+      "image": "card01_1784713711855.jpg",
+      "scrim": 0.62,
+      "imagePrompt": "(1장은 공고 포스터를 그대로 배경으로 씁니다. 교체할 필요 없습니다.)",
+      "blur": 2,
+      "focusX": 49.2,
+      "focusY": 47.4
+    },
+    {
+      "type": "content",
+      "headline": "*전공 무관*, 휴학생도",
+      "body": "국내 대학교와 대학원에 적을 두고 있으면 된다.\n8월부터 11월까지 넉 달 동안 활동한다.",
+      "imagePrompt": "Korean university students walking on a bright campus in early autumn, seen from behind at a distance, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card02_1784707090627.png",
+      "label": "모집대상",
+      "scrim": 0.55
+    },
+    {
+      "type": "content",
+      "headline": "숏폼을 만든다",
+      "body": "SNS에 올릴 콘텐츠를 직접 기획하고 제작한다.\n대면 활동은 한 달에 두 번, 참석은 필수다.",
+      "imagePrompt": "A smartphone on a small tripod filming a vertical short-form video in a bright minimal studio, ring light softly glowing, soft sky blue and white palette, airy natural light, shallow depth of field, no people faces, no text, no letters, no logos, editorial photography, 4:5 vertical",
+      "label": "활동내용",
+      "image": "card03_1784713099983.png",
+      "scrim": 0.63
+    },
+    {
+      "type": "content",
+      "headline": "수료하면 *가산점*까지",
+      "body": "공식 수료증과 활동비, 우수 성과 시상.\n신입공채에 지원할 때 서류전형 가산점을 준다.",
+      "imagePrompt": "A clean certificate document and a fountain pen on a light desk, soft sky blue and white palette, bright airy natural light, minimal composition, shallow depth of field, no text on the paper, no letters, no logos, editorial photography, 4:5 vertical",
+      "label": "혜택",
+      "image": "card04_1784713204830.png",
+      "scrim": 0.64,
+      "zoom": 1
+    },
+    {
+      "type": "content",
+      "headline": "*사전 과제*가 있다",
+      "body": "자기소개서와 함께 영상 한 편을 내야 한다.\n하반기 신입공채 홍보 주제, 세로형 45초~1분.",
+      "imagePrompt": "A laptop showing a video editing timeline on a bright desk beside a notebook and coffee, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text on screen, no letters, no logos, editorial photography, 4:5 vertical",
+      "label": "사전 과제",
+      "image": "card05_1784713312641.png",
+      "scrim": 0.63
+    },
+    {
+      "type": "content",
+      "headline": "일정을 먼저 확인",
+      "body": "서류 발표 8/4 · 면접 8/6~7 · 최종 8/12\n발대식은 8월 21일, 반드시 참석해야 한다.",
+      "imagePrompt": "A minimal desk calendar with a few days softly marked, blurred background of a bright window, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical",
+      "label": "활동일정",
+      "image": "card06_1784713524552.png",
+      "scrim": 0.59
+    },
+    {
+      "type": "content",
+      "label": "지원방법",
+      "headline": "마감은 *8월 2일*",
+      "body": "CJ대한통운 채용 홈페이지에서 온라인으로 접수한다.\ncjlrecruit.com",
+      "image": "card07_1784713588118.png",
+      "imagePrompt": "A hand holding a smartphone with a blank bright screen, clean minimal desk background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical",
+      "scrim": 0.59
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "대외활동 소식,\n*여기서* 받아보세요",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": [
+        "#대외활동",
+        "#대외활동맞팔"
+      ]
+    }
+  ]
+}

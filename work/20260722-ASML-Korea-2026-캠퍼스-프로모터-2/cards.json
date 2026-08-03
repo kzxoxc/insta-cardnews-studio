@@ -1,0 +1,121 @@
+{
+  "handle": "erai_log",
+  "style": "02_photo",
+  "source": {
+    "url": "https://linkareer.com/activity/333900",
+    "title": "[ASML Korea] 2026 캠퍼스 프로모터 모집 (~7/26)",
+    "publisher": "링커리어"
+  },
+  "caption": "세계 1위 반도체 장비 기업, ASML Korea 대외활동이 떴어요 🔥\n\n2026 캠퍼스 프로모터 12명을 모집합니다.\n반도체 산업 콘텐츠를 만들고 현장을 취재하는 활동이에요.\n\n· 모집대상 전국 대학생·휴학생 12명\n· 활동기간 2026년 8월 ~ 11월 (4개월)\n· 활동내용 미션 콘텐츠 제작 / 현장 취재 / 조별 캠페인 발표\n· 혜택 월 활동지원금 15만원, 수료증, 웰컴키트, 화성 캠퍼스 견학, 뮤직 페스티벌 초대, 우수활동자 시상\n\n⚠️ 발대식(8/24)이랑 뮤직 페스티벌(8/31)은 필수 참석이에요. 못 가면 지원 자체가 안 됩니다.\n\n📅 일정\n서류접수 ~7/26(일) 23:59 · 서류발표 7/30(목)\n온라인면접 8/5(수)~8/6(목) · 최종발표 8/13(목)\n\n지원은 네이버 폼으로 신청서 제출 + 개인정보 수집 동의입니다.\n\n서류 마감이 딱 4일 남았어요 (D-4). 지금 바로 저장하고 준비하세요 🙌\n대외활동 소식은 @erai_log 에서 정리해서 올립니다.\n\n출처 · 링커리어\n\n#대외활동 #대외활동추천 #대외활동맞팔 #서포터즈 #캠퍼스프로모터 #ASML #ASML코리아 #ASMLKorea #대학생대외활동 #공모전 #대학생 #스펙 #취준 #취업준비 #대외활동정보 #링커리어 #휴학생 #반도체 #반도체장비 #콘텐츠제작",
+  "brief": {
+    "모집대상": "전국 대학생 및 휴학생, 12명 (신청 현황에 따라 변경 가능)",
+    "지원자격": "콘텐츠 기획·제작에 관심 있는 대학생 / ASML·반도체 산업에 관심 있는 사람 / 유튜브·인스타그램·블로그 등 SNS 활동이 활발한 사람",
+    "모집일정": {
+      "서류접수": "2026.7.13(월) ~ 7.26(일) 23:59",
+      "서류발표": "2026.7.30(목)",
+      "온라인면접": "2026.8.5(수) ~ 8.6(목)",
+      "최종발표": "2026.8.13(목)",
+      "발대식": "2026.8.24(월) — 필수 참석",
+      "ASML 뮤직 페스티벌": "2026.8.31(월) — 필수 참석"
+    },
+    "활동기간": "2026년 8월 ~ 11월 (4개월)",
+    "활동내용": [
+      "주제별 미션 수행 및 콘텐츠 기획·제작",
+      "현장 취재 후 원고 작성 및 개인 SNS 업로드",
+      "조별 브랜드 캠페인 기획 및 PT 발표"
+    ],
+    "혜택": [
+      "월 활동지원금 15만원",
+      "활동자 전원 수료증 발급",
+      "프로모터 웰컴키트 제공",
+      "ASML Korea 화성 캠퍼스 견학",
+      "ASML Korea 뮤직 페스티벌 초대",
+      "우수활동자(팀) 시상"
+    ],
+    "지원방법": "네이버 폼 신청서 제출 + 개인정보 수집 동의 (링크: naver.me/5K6kTbVL)",
+    "주의사항": [
+      "발대식·뮤직 페스티벌 필수 참석 — 불참 시 지원 불가",
+      "제출 서류 기재 오류·누락의 불이익은 본인 책임, 서류 반환 안 됨",
+      "정당한 사유 없이 2회 이상 미참여 시 해촉",
+      "제작 콘텐츠는 ASML과 프로모터 공동 소유, 홍보 목적 재가공·배포 가능"
+    ],
+    "지원문의": "asml-kr@naver.com"
+  },
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "RECRUIT · D-4",
+      "tags": [
+        "#대외활동",
+        "#캠퍼스프로모터",
+        "#ASML"
+      ],
+      "title": "\n*세계 1위*\n반도체 장비 기업이\n대학생을 뽑는다",
+      "sub": "ASML Korea 캠퍼스 프로모터,\n12명을 모집한다 · 서류 마감 7/26",
+      "image": "poster.png",
+      "imagePrompt": "(1장은 공고 포스터를 그대로 배경으로 씁니다. 교체할 필요 없습니다.)",
+      "zoom": 3,
+      "focusX": 50,
+      "focusY": 0,
+      "blur": 4,
+      "scrim": 0.42
+    },
+    {
+      "type": "content",
+      "label": "모집대상",
+      "headline": "*12명* 뽑는다",
+      "body": "전국 대학생과 휴학생이면 지원할 수 있다.\n콘텐츠 제작이나 SNS 활동에 관심 있으면 된다.",
+      "imagePrompt": "Korean university students on a bright campus walkway holding smartphones, seen from behind at a distance, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card02_1784730485766.png",
+      "scrim": 0.61
+    },
+    {
+      "type": "content",
+      "label": "활동내용",
+      "headline": "미션 수행하고 *콘텐츠* 제작",
+      "body": "8월부터 11월까지 넉 달간 활동한다.\n미션 콘텐츠 제작, 현장 취재, 조별 캠페인 발표를 맡는다.",
+      "imagePrompt": "A smartphone on a small tripod filming vertical short-form video content in a bright minimal studio, soft sky blue and white palette, airy natural light, shallow depth of field, no people faces, no text, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card03_1784730561975.png",
+      "scrim": 0.68
+    },
+    {
+      "type": "content",
+      "label": "혜택",
+      "headline": "*15만원*에 견학까지",
+      "body": "월 15만원 활동비와 수료증을 준다.\n웰컴키트·화성 캠퍼스 견학·뮤직 페스티벌 초대, 우수활동자 시상까지 있다.",
+      "imagePrompt": "A clean certificate document and a welcome kit box on a light desk, soft sky blue and white palette, bright airy natural light, minimal composition, shallow depth of field, no text on the paper, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card04_1784730623137.png",
+      "scrim": 0.68
+    },
+    {
+      "type": "content",
+      "label": "활동일정",
+      "headline": "*필수 참석*이 두 번",
+      "body": "서류 접수 7/26 마감 · 최종 발표 8/13.\n발대식 8/24 · 뮤직 페스티벌 8/31, 둘 다 필수 참석.",
+      "imagePrompt": "A minimal desk calendar with a few days softly marked, blurred background of a bright window, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card05_1784730698664.png",
+      "scrim": 0.69
+    },
+    {
+      "type": "content",
+      "label": "지원방법",
+      "headline": "*네이버 폼*으로 지원",
+      "body": "네이버 폼으로 신청서를 내고 개인정보 수집에 동의한다.\n정당한 사유 없이 2회 이상 빠지면 해촉될 수 있다.",
+      "imagePrompt": "A hand holding a smartphone with a blank bright screen showing a simple form, clean minimal desk background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "대외활동 소식,\n*여기서* 받아보세요",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": [
+        "#대외활동",
+        "#대외활동맞팔"
+      ]
+    }
+  ]
+}

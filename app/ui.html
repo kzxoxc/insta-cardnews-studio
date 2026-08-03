@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>카드뉴스 스튜디오</title>
+<style>
+@font-face{font-family:'Pretendard';src:url('/fonts/Pretendard-Regular.otf');font-weight:400;}
+@font-face{font-family:'Pretendard';src:url('/fonts/Pretendard-Medium.otf');font-weight:500;}
+@font-face{font-family:'Pretendard';src:url('/fonts/Pretendard-SemiBold.otf');font-weight:600;}
+@font-face{font-family:'Pretendard';src:url('/fonts/Pretendard-Bold.otf');font-weight:700;}
+
+:root{
+  --bg:#F4F8FB; --panel:#fff; --line:rgba(15,44,68,.12);
+  --ink:#0F2C44; --muted:#6B8399; --accent:#1F7AC0; --accent-soft:#EAF3FA;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:'Pretendard',sans-serif;font-size:14px;}
+button,input,textarea,select{font:inherit;color:inherit;}
+
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+  display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10;}
+header h1{font-size:15px;font-weight:700;letter-spacing:-.02em;white-space:nowrap;}
+header .badge{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent);white-space:nowrap;}
+
+.modes{display:flex;background:#EDF3F8;border-radius:9px;padding:3px;gap:2px;flex:none;}
+.mtab{padding:7px 14px;border:0;border-radius:7px;background:transparent;
+  font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;}
+.mtab.on{background:#fff;color:var(--accent);box-shadow:0 1px 3px rgba(15,44,68,.12);}
+
+.urlbar{flex:1;display:flex;gap:8px;min-width:0;align-items:center;}
+.urlbar input{flex:1;min-width:0;padding:10px 14px;border:1px solid var(--line);
+  border-radius:9px;background:#fff;outline:none;}
+.urlbar input:focus{border-color:var(--accent);}
+.topickind{flex:none;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
+  color:var(--muted);white-space:nowrap;cursor:pointer;user-select:none;}
+.topickind input{width:auto;flex:none;accent-color:var(--accent);cursor:pointer;}
+
+.btn{padding:10px 16px;border:1px solid var(--line);border-radius:9px;background:#fff;
+  font-weight:600;cursor:pointer;white-space:nowrap;transition:.12s;}
+.btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent);}
+.btn:disabled{opacity:.45;cursor:not-allowed;}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn.primary:hover:not(:disabled){filter:brightness(1.08);color:#fff;}
+.btn.sm{padding:6px 11px;font-size:12px;border-radius:7px;}
+
+#status{padding:9px 22px;font-size:13px;display:none;border-bottom:1px solid var(--line);}
+#status.on{display:block;}
+#status.err{background:#FDECEC;color:#B3261E;}
+#status.info{background:var(--accent-soft);color:var(--accent);}
+
+main{display:grid;grid-template-columns:1fr 400px;gap:20px;padding:20px 22px 60px;
+  align-items:start;max-width:1500px;margin:0 auto;}
+@media(max-width:1100px){main{grid-template-columns:1fr;}}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;}
+.panel h2{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em;margin-bottom:14px;}
+
+/* 카드 미리보기 */
+.stage{display:flex;flex-direction:column;align-items:center;gap:18px;}
+.big{width:432px;height:540px;border-radius:12px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 10px 30px rgba(15,44,68,.10);flex:none;}
+.big iframe{width:1080px;height:1350px;border:0;transform:scale(.4);transform-origin:top left;}
+
+.strip{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.thumb{position:relative;width:108px;height:135px;border-radius:8px;overflow:hidden;
+  border:2px solid transparent;cursor:pointer;background:#fff;flex:none;
+  box-shadow:0 2px 8px rgba(15,44,68,.08);}
+.thumb.sel{border-color:var(--accent);}
+.thumb iframe{width:1080px;height:1350px;border:0;transform:scale(.1);
+  transform-origin:top left;pointer-events:none;}
+.thumb span{position:absolute;left:5px;top:5px;background:rgba(15,44,68,.72);color:#fff;
+  font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px;}
+
+/* 편집 */
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px;}
+.field input,.field textarea{width:100%;padding:9px 11px;border:1px solid var(--line);
+  border-radius:8px;background:#fff;outline:none;resize:vertical;line-height:1.5;}
+.field input:focus,.field textarea:focus{border-color:var(--accent);}
+.field textarea{min-height:70px;}
+.hint{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5;}
+
+.rowbtns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;
+  padding-bottom:16px;border-bottom:1px solid var(--line);}
+
+/* 배경 사진 */
+.imgbox{border:1.5px dashed var(--line);border-radius:10px;padding:12px;
+  background:#FAFCFE;outline:none;}
+.imgbox.over{border-color:var(--accent);background:var(--accent-soft);}
+.imgbox img{display:block;width:100%;max-height:190px;object-fit:cover;
+  border-radius:7px;margin-bottom:10px;}
+.imgbox .ph{display:block;padding:22px 8px;text-align:center;color:var(--muted);
+  font-size:12px;line-height:1.6;}
+.imgbtns{display:flex;gap:6px;flex-wrap:wrap;}
+
+.slider{display:flex;align-items:center;gap:10px;}
+.slider input[type=range]{flex:1;accent-color:var(--accent);}
+.slider b{font-size:12px;color:var(--accent);min-width:34px;text-align:right;}
+
+/* 배경 사진 위치·확대 (드래그로 조절) */
+.cropouter{position:relative;width:300px;height:375px;max-width:100%;}
+.cropbox{position:absolute;inset:0;overflow:hidden;border-radius:10px;background:#EDF3F8;
+  cursor:move;touch-action:none;outline:1px solid var(--line);outline-offset:-1px;}
+.cropbox img{position:absolute;left:0;top:0;max-width:none;max-height:none;
+  user-select:none;-webkit-user-drag:none;pointer-events:none;}
+.crophandle{position:absolute;right:-9px;bottom:-9px;width:20px;height:20px;border-radius:6px;
+  background:var(--accent);border:2px solid #fff;box-shadow:0 1px 4px rgba(15,44,68,.35);
+  cursor:nwse-resize;touch-action:none;z-index:2;}
+.cropbar{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
+.cropbar b{font-size:13px;color:var(--accent);}
+
+.empty{color:var(--muted);text-align:center;padding:50px 20px;line-height:1.7;font-size:13px;}
+
+/* 결과 */
+#result{margin-top:16px;}
+#result a{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:9px 12px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;
+  text-decoration:none;color:var(--ink);font-weight:500;font-size:13px;}
+#result a:hover{border-color:var(--accent);color:var(--accent);}
+#result a b{font-weight:400;color:var(--muted);font-size:12px;}
+
+select.proj{padding:9px 11px;border:1px solid var(--line);border-radius:9px;
+  background:#fff;max-width:230px;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>카드뉴스 스튜디오</h1>
+  <span class="badge" id="mode">…</span>
+  <div class="modes">
+    <button class="mtab on" data-mode="link">링크로</button>
+    <button class="mtab" data-mode="topic">주제로</button>
+  </div>
+  <div class="urlbar">
+    <input id="url" type="url" placeholder="기사·공고 링크를 붙여넣으세요  (https://…)" autocomplete="off">
+    <input id="topic" placeholder="예: 정보처리기사 필기 준비법 / 컴활 1급이 뭔지" autocomplete="off" hidden>
+    <label class="topickind" id="topicKindWrap" hidden title="체크하면 모집일정·혜택 대신 정의·배우는 내용·진로 구조로 만듭니다">
+      <input type="checkbox" id="topicMajor"> 전공지식형
+    </label>
+    <button class="btn primary" id="go">가져오기</button>
+  </div>
+  <select class="proj" id="projects"><option value="">— 이전 작업 —</option></select>
+  <button class="btn sm" id="delProject" title="선택한 이전 작업을 완전히 삭제합니다">삭제</button>
+</header>
+
+<div id="status"></div>
+
+<main>
+  <section class="panel">
+    <h2>미리보기</h2>
+    <div class="stage" id="stage">
+      <div class="empty">링크를 가져오거나 이전 작업을 열면<br>여기에 카드가 나타납니다.</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>문구 수정</h2>
+    <div id="editor"><div class="empty">카드를 선택하세요.</div></div>
+  </section>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+let doc = null, slug = null, sel = 0, fields = {}, saveTimer = null;
+
+const status = (msg, kind = 'info') => {
+  const el = $('#status');
+  el.textContent = msg;
+  el.className = msg ? `on ${kind}` : '';
+};
+
+async function api(path, body) {
+  const res = await fetch(path, body ? {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body),
+  } : undefined);
+  const data = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+  return data;
+}
+
+// ── 미리보기 ────────────────────────────────────────────────
+function cardSrc(i) { return `/card/${encodeURIComponent(slug)}/${i}?v=${Date.now()}`; }
+
+function paint() {
+  if (!doc) return;
+  sel = Math.max(0, Math.min(sel, doc.cards.length - 1));
+
+  $('#stage').innerHTML = `
+    <div class="big"><iframe id="bigframe" src="${cardSrc(sel)}"></iframe></div>
+    <div class="strip">${doc.cards.map((c, i) => `
+      <div class="thumb ${i === sel ? 'sel' : ''}" data-i="${i}">
+        <iframe src="${cardSrc(i)}" scrolling="no"></iframe>
+        <span>${String(i + 1).padStart(2, '0')}</span>
+      </div>`).join('')}
+    </div>`;
+
+  $('#stage').querySelectorAll('.thumb').forEach((t) => {
+    t.onclick = () => { sel = Number(t.dataset.i); paint(); buildEditor(); };
+  });
+}
+
+/** 편집 중에는 전체를 다시 그리지 않고 해당 프레임만 갱신한다 (입력 포커스 유지) */
+function refreshFrames() {
+  const big = $('#bigframe');
+  if (big) big.src = cardSrc(sel);
+  const t = $(`.thumb[data-i="${sel}"] iframe`);
+  if (t) t.src = cardSrc(sel);
+}
+
+// ── 편집 폼 ─────────────────────────────────────────────────
+function buildEditor() {
+  if (!doc) return;
+  const c = doc.cards[sel];
+  const spec = fields[c.type] || fields.content;
+
+  const enc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+  const rows = spec.map(([key, label, kind]) => {
+    const v = c[key] ?? (kind === 'tags' ? [] : '');
+    let input;
+
+    if (kind === 'image') {
+      input = `<div class="imgbox" id="drop">
+          ${c.image
+            ? `<img src="/img/${encodeURIComponent(slug)}/${encodeURIComponent(c.image)}?v=${Date.now()}" alt="">`
+            : '<span class="ph">사진 없음 — 스타일 01(그라데이션)로 나갑니다</span>'}
+          <div class="imgbtns">
+            <button class="btn sm" data-act="pick">파일 선택</button>
+            ${c.image ? '<button class="btn sm" data-act="rmimg">제거</button>' : ''}
+          </div>
+          <div class="hint">드래그해서 놓거나, 이미지를 복사한 뒤 이 영역을 클릭하고 Ctrl+V 해도 됩니다.</div>
+        </div>`;
+    } else if (kind === 'prompt') {
+      input = `<textarea data-k="${key}" data-kind="text" rows="4"
+          placeholder="이 카드에 쓸 AI 이미지 프롬프트">${enc(v)}</textarea>
+        <div class="imgbtns" style="margin-top:6px">
+          <button class="btn sm" data-act="copy">프롬프트 복사</button>
+        </div>`;
+    } else if (kind === 'crop') {
+      input = c.image
+        ? `<div class="cropouter" id="cropouter">
+            <div class="cropbox" id="cropbox">
+              <img id="cropimg" draggable="false" alt=""
+                   src="/img/${encodeURIComponent(slug)}/${encodeURIComponent(c.image)}?v=${Date.now()}">
+            </div>
+            <div class="crophandle" id="crophandle" title="대각선으로 끌면 확대·축소"></div>
+          </div>
+          <div class="cropbar">
+            <b id="cropzoom">1.00×</b>
+            <button class="btn sm" data-act="cropreset">위치·확대 초기화</button>
+          </div>
+          <div class="hint">사진을 드래그하면 위치가 움직이고, 오른쪽 아래 모서리를 대각선으로 끌면 확대·축소됩니다.</div>`
+        : `<div class="hint">사진을 올리면 위치·확대를 조절할 수 있어요.</div>`;
+    } else if (kind === 'scrim') {
+      const cur = Number(v || (c.type === 'cover' ? 0.62 : c.type === 'cta' ? 0.82 : 0.84));
+      input = `<div class="slider">
+          <input type="range" min="0" max="1" step="0.01" value="${cur}"
+                 data-k="${key}" data-kind="num">
+          <b id="scrimval">${cur.toFixed(2)}</b>
+        </div>
+        <div class="hint">낮을수록 사진이 선명합니다. 0에 가까우면 하늘색 막 없이 사진이 그대로
+          드러나요 — 글자에는 그림자가 깔려 있어 최소한은 읽힙니다. 포스터는 .62 안팎, 글이 긴
+          내용 카드는 .84 위로 두면 안전합니다.</div>`;
+    } else if (kind === 'text') {
+      input = `<textarea data-k="${key}" data-kind="${kind}">${enc(v)}</textarea>`;
+    } else {
+      const val = kind === 'tags' ? (Array.isArray(v) ? v.join(' ') : v) : v;
+      input = `<input data-k="${key}" data-kind="${kind}" value="${enc(val)}">`;
+    }
+    return `<div class="field"><label>${label}</label>${input}</div>`;
+  }).join('');
+
+  $('#editor').innerHTML = `
+    <div class="rowbtns">
+      <button class="btn sm" data-act="add">＋ 내용 카드</button>
+      <button class="btn sm" data-act="up">↑ 앞으로</button>
+      <button class="btn sm" data-act="down">↓ 뒤로</button>
+      <button class="btn sm" data-act="del">삭제</button>
+    </div>
+    <div class="hint" style="margin:-6px 0 12px">
+      ${sel + 1}번째 카드 · <b>${c.type}</b> — <b>*별표*</b>로 감싸면 그 부분만 강조색이 됩니다
+      (제목·본문 각각 한 곳씩, 카드당 최대 두 곳).
+    </div>
+    ${rows}
+    <button class="btn primary" id="render" style="width:100%;margin-top:8px">PNG 만들기 (2160×2700)</button>
+    <div id="result"></div>`;
+
+  $('#editor').querySelectorAll('[data-k]').forEach((el) => {
+    el.oninput = () => {
+      const kind = el.dataset.kind;
+      const card = doc.cards[sel];
+      if (kind === 'tags') card[el.dataset.k] = el.value.split(/\s+/).filter(Boolean);
+      else if (kind === 'num') {
+        card[el.dataset.k] = Number(el.value);
+        $('#scrimval').textContent = Number(el.value).toFixed(2);
+      } else card[el.dataset.k] = el.value;
+      queueSave();
+    };
+  });
+
+  $('#editor').querySelectorAll('[data-act]').forEach((b) => { b.onclick = () => act(b.dataset.act); });
+  $('#render').onclick = render;
+  wireImageInput();
+  wireCrop();
+}
+
+// ── 배경 사진 위치·확대 (드래그로 조절) ──────────────────────
+// 렌더 쪽 기본값(app/cards.mjs 의 zoom/focus 기본값)과 반드시 맞춰야 미리보기와 실제 결과가 같다.
+const ZOOM_DEFAULT = { cover: 2.0, content: 1.08, cta: 1.08 };
+
+function cropState(card) {
+  const legacyY = card.focus != null ? parseFloat(card.focus) : null;
+  return {
+    zoom: Number(card.zoom ?? ZOOM_DEFAULT[card.type] ?? 1.08),
+    fx: Number(card.focusX ?? 50),
+    fy: Number(card.focusY ?? legacyY ?? 50),
+  };
+}
+
+function wireCrop() {
+  const box = $('#cropbox');
+  if (!box) return;
+  const img = $('#cropimg');
+  const handle = $('#crophandle');
+  const zoomLabel = $('#cropzoom');
+  const CW = box.clientWidth, CH = box.clientHeight;
+
+  function frame() {
+    const nw = img.naturalWidth, nh = img.naturalHeight;
+    if (!nw || !nh) return null;
+    const { zoom, fx, fy } = cropState(doc.cards[sel]);
+    const scale0 = Math.max(CW / nw, CH / nh);
+    const dispW = nw * scale0 * zoom, dispH = nh * scale0 * zoom;
+    return {
+      dispW, dispH, zoom, fx, fy,
+      offX: (CW - dispW) * fx / 100,
+      offY: (CH - dispH) * fy / 100,
+    };
+  }
+
+  function layout() {
+    const f = frame();
+    if (!f) return;
+    img.style.width = f.dispW + 'px';
+    img.style.height = f.dispH + 'px';
+    img.style.left = f.offX + 'px';
+    img.style.top = f.offY + 'px';
+    zoomLabel.textContent = f.zoom.toFixed(2) + '×';
+  }
+
+  function updateCard(patch) {
+    Object.assign(doc.cards[sel], patch);
+    layout();
+    queueSave();
+  }
+
+  if (img.complete && img.naturalWidth) layout(); else img.onload = layout;
+
+  // 드래그 = 위치 이동
+  let pan = null;
+  box.onpointerdown = (e) => {
+    const f = frame();
+    if (!f) return;
+    box.setPointerCapture(e.pointerId);
+    pan = { x: e.clientX, y: e.clientY, ...f };
+  };
+  box.onpointermove = (e) => {
+    if (!pan) return;
+    const dx = e.clientX - pan.x, dy = e.clientY - pan.y;
+    const minX = Math.min(0, CW - pan.dispW), minY = Math.min(0, CH - pan.dispH);
+    const offX = Math.max(minX, Math.min(0, pan.offX + dx));
+    const offY = Math.max(minY, Math.min(0, pan.offY + dy));
+    const fx = pan.dispW > CW ? (offX / (CW - pan.dispW)) * 100 : 50;
+    const fy = pan.dispH > CH ? (offY / (CH - pan.dispH)) * 100 : 50;
+    updateCard({ focusX: Math.round(fx * 10) / 10, focusY: Math.round(fy * 10) / 10 });
+  };
+  box.onpointerup = box.onpointercancel = () => { pan = null; };
+
+  // 모서리 대각선 드래그 = 확대·축소
+  let zoomDrag = null;
+  handle.onpointerdown = (e) => {
+    e.stopPropagation();
+    handle.setPointerCapture(e.pointerId);
+    const rect = box.getBoundingClientRect();
+    const cx = rect.left + CW / 2, cy = rect.top + CH / 2;
+    const dist = Math.max(Math.hypot(e.clientX - cx, e.clientY - cy), 1);
+    zoomDrag = { cx, cy, dist, zoom: cropState(doc.cards[sel]).zoom };
+  };
+  handle.onpointermove = (e) => {
+    if (!zoomDrag) return;
+    const dist = Math.hypot(e.clientX - zoomDrag.cx, e.clientY - zoomDrag.cy);
+    const zoom = Math.max(1, Math.min(3, zoomDrag.zoom * (dist / zoomDrag.dist)));
+    updateCard({ zoom: Math.round(zoom * 100) / 100 });
+  };
+  handle.onpointerup = handle.onpointercancel = () => { zoomDrag = null; };
+}
+
+// ── 배경 사진 넣기 (파일 선택 / 드래그 / 붙여넣기) ──────────────
+function wireImageInput() {
+  const box = $('#drop');
+  if (!box) return;
+
+  box.ondragover = (e) => { e.preventDefault(); box.classList.add('over'); };
+  box.ondragleave = () => box.classList.remove('over');
+  box.ondrop = (e) => {
+    e.preventDefault();
+    box.classList.remove('over');
+    const f = [...e.dataTransfer.files].find((x) => x.type.startsWith('image/'));
+    if (f) upload(f);
+  };
+
+  // 붙여넣기는 이 영역이 포커스를 가진 동안에만 받는다
+  box.tabIndex = 0;
+  box.onpaste = (e) => {
+    const item = [...(e.clipboardData?.items || [])].find((x) => x.type.startsWith('image/'));
+    if (item) { e.preventDefault(); upload(item.getAsFile()); }
+  };
+}
+
+async function upload(file) {
+  if (!file) return;
+  status(`사진 올리는 중… (${Math.round(file.size / 1024)} KB)`);
+  try {
+    const res = await fetch(`/api/upload?slug=${encodeURIComponent(slug)}&card=${sel}`, {
+      method: 'POST', headers: { 'content-type': file.type }, body: file,
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error);
+    doc.cards[sel].image = data.image;
+    doc.style = '02_photo';
+    paint(); buildEditor();
+    status(`사진 적용 (${data.kb} KB)`);
+  } catch (e) {
+    status('업로드 실패: ' + e.message, 'err');
+  }
+}
+
+function act(a) {
+  const cards = doc.cards;
+
+  if (a === 'pick') {
+    const inp = document.createElement('input');
+    inp.type = 'file';
+    inp.accept = 'image/png,image/jpeg,image/webp';
+    inp.onchange = () => upload(inp.files[0]);
+    inp.click();
+    return;
+  }
+  if (a === 'copy') {
+    const t = $('#editor').querySelector('[data-k="imagePrompt"]');
+    navigator.clipboard.writeText(t?.value || '')
+      .then(() => status('프롬프트를 복사했습니다. 이미지 생성 도구에 붙여넣고, 만든 사진을 여기 올리세요.'))
+      .catch(() => status('복사 실패 — 직접 선택해서 복사해주세요.', 'err'));
+    return;
+  }
+  if (a === 'rmimg') {
+    delete cards[sel].image;
+    if (!cards.some((c) => c.image)) doc.style = '01_sky';
+    save().then(() => { paint(); buildEditor(); });
+    return;
+  }
+  if (a === 'cropreset') {
+    delete cards[sel].zoom; delete cards[sel].focusX; delete cards[sel].focusY; delete cards[sel].focus;
+    save().then(() => { paint(); buildEditor(); });
+    return;
+  }
+
+  if (a === 'add') {
+    cards.splice(sel + 1, 0, { type: 'content', headline: '소제목', body: '본문을 써주세요.' });
+    sel += 1;
+  } else if (a === 'del') {
+    if (cards.length <= 1) return status('마지막 카드는 지울 수 없습니다.', 'err');
+    cards.splice(sel, 1);
+    sel = Math.max(0, sel - 1);
+  } else if (a === 'up' && sel > 0) {
+    [cards[sel - 1], cards[sel]] = [cards[sel], cards[sel - 1]];
+    sel -= 1;
+  } else if (a === 'down' && sel < cards.length - 1) {
+    [cards[sel + 1], cards[sel]] = [cards[sel], cards[sel + 1]];
+    sel += 1;
+  } else return;
+  save().then(() => { paint(); buildEditor(); });
+}
+
+function queueSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => save().then(refreshFrames), 400);
+}
+
+async function save() {
+  if (!slug || !doc) return;
+  try { await api('/api/save', { slug, doc }); status(''); }
+  catch (e) { status('저장 실패: ' + e.message, 'err'); }
+}
+
+// ── 액션 ────────────────────────────────────────────────────
+let mode = 'link';
+
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.mtab').forEach((b) => b.classList.toggle('on', b.dataset.mode === m));
+  $('#url').hidden = m !== 'link';
+  $('#topic').hidden = m === 'link';
+  $('#topicKindWrap').hidden = m === 'link';
+  $('#go').textContent = m === 'link' ? '가져오기' : '만들기';
+  (m === 'link' ? $('#url') : $('#topic')).focus();
+}
+
+async function run() {
+  if (mode === 'topic') return compose();
+  const url = $('#url').value.trim();
+  if (!url) return;
+  $('#go').disabled = true;
+  status('본문을 가져오는 중…');
+  try {
+    const r = await api('/api/extract', { url });
+    slug = r.slug; doc = r.doc; sel = 0;
+    paint(); buildEditor();
+    await loadProjects();
+    $('#projects').value = slug;
+    status(r.mode === 'llm'
+      ? `완료 — 본문 ${r.article.chars}자에서 ${doc.cards.length}장을 만들었습니다.`
+      : `본문 ${r.article.chars}자 추출 완료. API 키가 없어 초안만 만들었습니다 — 문구를 직접 채우거나 Claude Code 에게 work/${slug}/cards.json 을 써달라고 하세요.`);
+  } catch (e) {
+    status(e.message, 'err');
+  } finally {
+    $('#go').disabled = false;
+  }
+}
+
+async function compose() {
+  const topic = $('#topic').value.trim();
+  if (!topic) return;
+  const kind = $('#topicMajor').checked ? 'major' : 'general';
+  $('#go').disabled = true;
+  status('카드를 구성하는 중…');
+  try {
+    const r = await api('/api/compose', { topic, kind });
+    slug = r.slug; doc = r.doc; sel = 0;
+    paint(); buildEditor();
+    await loadProjects();
+    $('#projects').value = slug;
+
+    const verify = doc.factsToVerify?.length
+      ? ` 게시 전 확인 필요: ${doc.factsToVerify.join(' / ')}`
+      : '';
+    status(r.mode === 'llm'
+      ? `${doc.cards.length}장을 만들었습니다. 원문이 없는 생성이라 숫자·날짜는 반드시 직접 확인하세요.${verify}`
+      : `틀만 만들었습니다. API 키가 없어 내용은 비어 있습니다 — Claude Code 에게 "work/${slug} 주제로 카드 써줘" 라고 하세요.`,
+      r.mode === 'llm' ? 'err' : 'info');
+  } catch (e) {
+    status(e.message, 'err');
+  } finally {
+    $('#go').disabled = false;
+  }
+}
+
+async function render() {
+  $('#render').disabled = true;
+  status('렌더 중… 카드 장수만큼 Chrome 을 띄웁니다.');
+  try {
+    await save();
+    const r = await api('/api/render', { slug });
+    $('#result').innerHTML = r.files.map((f) =>
+      `<a href="${f.url}" download="${slug}_${f.name}">${f.name} <b>${f.kb} KB</b></a>`).join('');
+    status(`PNG ${r.files.length}장 완성 — output/${slug}/ 에도 저장했습니다.`);
+  } catch (e) {
+    status('렌더 실패: ' + e.message, 'err');
+  } finally {
+    $('#render').disabled = false;
+  }
+}
+
+async function loadProjects() {
+  const r = await api('/api/projects');
+  fields = r.fields;
+  $('#mode').textContent = r.hasApiKey ? 'AI 자동' : '수동 모드';
+  $('#projects').innerHTML = '<option value="">— 이전 작업 —</option>' +
+    r.projects.map((p) => `<option value="${p.slug}">${p.title} (${p.count}장)</option>`).join('');
+}
+
+$('#go').onclick = run;
+$('#url').onkeydown = (e) => { if (e.key === 'Enter') run(); };
+$('#topic').onkeydown = (e) => { if (e.key === 'Enter') run(); };
+document.querySelectorAll('.mtab').forEach((b) => { b.onclick = () => setMode(b.dataset.mode); });
+$('#projects').onchange = async (e) => {
+  if (!e.target.value) return;
+  const r = await api('/api/project/' + encodeURIComponent(e.target.value));
+  slug = r.slug; doc = r.doc; sel = 0;
+  paint(); buildEditor(); status('');
+};
+
+$('#delProject').onclick = async () => {
+  const picker = $('#projects');
+  const target = picker.value;
+  if (!target) return status('삭제할 이전 작업을 먼저 선택하세요.', 'err');
+  const label = picker.options[picker.selectedIndex].textContent;
+  if (!confirm(`"${label}" 를 삭제할까요?\n원문·이미지·카드 문구·만든 PNG 가 모두 사라지고 되돌릴 수 없습니다.`)) return;
+  try {
+    await api('/api/project/delete', { slug: target });
+    if (slug === target) {
+      slug = null; doc = null;
+      $('#stage').innerHTML = '<div class="empty">링크를 가져오거나 이전 작업을 열면<br>여기에 카드가 나타납니다.</div>';
+      $('#editor').innerHTML = '<div class="empty">카드를 선택하세요.</div>';
+    }
+    await loadProjects();
+    status('삭제했습니다.');
+  } catch (e) {
+    status('삭제 실패: ' + e.message, 'err');
+  }
+};
+
+loadProjects();
+</script>
+</body>
+</html>

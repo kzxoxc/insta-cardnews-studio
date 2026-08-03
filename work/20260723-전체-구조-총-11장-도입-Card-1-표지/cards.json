@@ -1,0 +1,98 @@
+{
+  "handle": "erai_log",
+  "style": "01_sky",
+  "source": {
+    "topic": "전체 구조 (총 11장) 도입 — 노광장비(EUV 스캐너) 설명 카드뉴스. 사용자가 카드별 내용을 직접 스크립트로 제공함."
+  },
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "TECH · EUV",
+      "tags": ["#반도체", "#노광장비", "#EUV"],
+      "title": "반도체의 *미세패턴*은\n어떻게 만들어질까?",
+      "sub": "빛으로 회로를 새기는 기계,\n노광장비 이야기",
+      "imagePrompt": "Abstract soft light beams passing through a translucent glass mask onto a silicon wafer, minimal scientific illustration style, soft sky blue and white palette, airy, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "훅",
+      "headline": "그림은 *빛*으로 그린다",
+      "body": "손톱만 한 칩에 회로가 수백억 개 들어간다.\n사람 손으로는 못 그리니 빛으로 그린다 — 그 빛을 쏘는 기계가 노광장비(스캐너)다.",
+      "imagePrompt": "A tiny microchip held on a fingertip, extreme macro shot, soft sky blue tones, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "비유",
+      "headline": "*초정밀 사진기*라고 보면 된다",
+      "body": "회로 도면을 빛으로 축소 인화하는 초정밀 사진기다.\n사진관 인화 원리와 같다, 방향만 반대다 — 큰 도면을 줄여 웨이퍼에 찍는다.",
+      "imagePrompt": "A vintage photo enlarger projecting light through a film negative onto photo paper, reinterpreted in soft sky blue minimal tones, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "광원",
+      "headline": "*파장*이 짧을수록 가늘게 그린다",
+      "body": "연필심이 가늘수록 가는 선을 긋는 것과 같다.\n빛도 파장이 짧을수록 더 가는 회로를 그린다 — 그 역사가 곧 반도체 발전사다.",
+      "imagePrompt": "A single narrow beam of light passing through a small aperture, minimal abstract composition, soft sky blue and white palette, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "마스크",
+      "headline": "회로 도면, *유리판*에 새긴다",
+      "body": "마스크는 판화의 원판, 또는 사진 필름과 같다.\n회로 패턴이 새겨진 유리판이고, 빛이 이걸 통과하며 패턴을 담아 내려온다.",
+      "imagePrompt": "A glass photomask with an etched circuit pattern held up to soft light in a minimal studio, soft sky blue tones, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "렌즈",
+      "headline": "돋보기를 *거꾸로* 쓴 셈이다",
+      "body": "돋보기가 크게 보이게 한다면 이 렌즈는 작게 줄인다.\n마스크의 도면을 1/4로 축소해 웨이퍼에 투영한다.",
+      "imagePrompt": "A large precision lens assembly focusing and reducing a beam of light, minimal optical diagram feel, soft sky blue and white palette, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "스테이지",
+      "headline": "찍고 *옮기고* 또 찍는다",
+      "body": "도장을 찍고 종이를 옮겨 또 찍는 것과 같다.\n웨이퍼 한 장에 칩이 수백 개, 한 칸씩 옮기며 반복 노광한다 — 나노미터 단위로 멈춰야 한다.",
+      "imagePrompt": "A silicon wafer on a precision stage positioned under a light source in small increments, minimal industrial illustration, soft sky blue tones, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "빛의 역사",
+      "headline": "빛은 점점 *짧아졌다*",
+      "body": "붓에서 볼펜, 샤프심, 바늘 끝으로 갈수록 세밀해지는 것과 같다.\ng/i-line → KrF → ArF → ArF 이머전 → EUV(13.5nm) 순으로 짧아졌다.",
+      "imagePrompt": "A single beam of light narrowing progressively from broad to razor thin, abstract minimal gradient, soft sky blue and white palette, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "EUV",
+      "headline": "*주석*을 터뜨려 빛을 뽑는다",
+      "body": "EUV 파장은 13.5nm, 기존 빛의 약 1/14이라 렌즈를 통과 못 해 거울로 반사시킨다.\n주석 방울에 레이저를 쏴 플라즈마로 터뜨려 이 빛을 만든다.",
+      "imagePrompt": "A tiny molten metal droplet struck by a laser creating a brief bright plasma flash, abstract macro photography, soft sky blue toned dark contrast, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "최전선",
+      "headline": "*3.8억 달러*짜리 기계",
+      "body": "렌즈를 키워(NA 0.33→0.55) 해상도를 8nm급까지 올렸다.\n2026년 7월 인텔이 이 장비로 18A 칩(Panther Lake)을 *세계 최초*로 양산했다.",
+      "imagePrompt": "A massive precision industrial machine the size of a bus inside a clean semiconductor fab, soft sky blue and white palette, airy natural light, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "정리",
+      "headline": "다음 세대 *빛*은 뭘까?",
+      "body": "노광장비는 빛으로 회로를 축소 인화하는 세상에서 가장 정밀한 사진기다.\n회로가 작아질수록 빛은 더 짧아져야 한다 — 다음 빛은 무엇일지가 다음 이야기다.",
+      "imagePrompt": "A glowing beam of light converging to a single precise point on a dark background, soft sky blue minimal composition, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "반도체 이야기,\n*여기서* 계속됩니다",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": ["#반도체", "#EUV"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l files.zip)",
+      "Bash(python -c \"import playwright; print\\('playwright ok'\\)\")",
+      "PowerShell(Test-Path \"$env:USERPROFILE\\\\AppData\\\\Local\\\\ms-playwright\"; Get-ChildItem \"$env:USERPROFILE\\\\AppData\\\\Local\\\\ms-playwright\" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; \"---puppeteer cache---\"; Get-ChildItem \"$env:USERPROFILE\\\\.cache\\\\puppeteer\" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; \"---chrome---\"; Test-Path \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"; Test-Path \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\")",
+      "Bash(node app/server.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(node app/render.mjs _render-test)",
+      "Bash(node \"C:/Users/chjm0/AppData/Local/Temp/claude/C--Users-chjm0-Desktop-------insta-ai-auto/135097ce-fd08-422e-858c-d21b98e5780f/scratchpad/zoom.mjs\" \"input/포스터/cj-ambassador/body1.jpg\" 1457 690 1590 767 260 3.2)",
+      "Bash(cd \"C:/Users/chjm0/Desktop/바이브코딩/insta ai auto\" && find .claude -maxdepth 3 2>/dev/null && echo \"--- 사용자 전역 스킬 ---\" && ls \"C:/Users/chjm0/.claude/skills\" 2>/dev/null || echo \"\\(전역 skills 폴더 없음\\)\")",
+      "Bash(node --check app/llm.mjs)",
+      "Bash(node app/render.mjs \"20260722-CJ대한통운-CJ-LOGISTICS-대학생-\")",
+      "Bash(node app/ensure-server.mjs)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(node app/zoom.mjs *)",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Stop-Process -Id 11308 -Force\")",
+      "Bash(node app/render.mjs _test_crop_feature)",
+      "Bash(node --check \"C:\\\\Users\\\\chjm0\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-chjm0-Desktop-------insta-ai-auto\\\\8baf157a-c46a-43c1-84e4-eab457c007df\\\\scratchpad\\\\ui_script_check.js\")",
+      "Bash(node --check app/server.mjs)",
+      "Bash(powershell -Command \"Stop-Process -Id 23260 -Force\")",
+      "Bash(node app/render.mjs \"20260722-ASML-Korea-2026-캠퍼스-프로모터-2\")",
+      "Bash(powershell -Command \"Stop-Process -Id 28932 -Force\")"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node app/ensure-server.mjs",
+            "timeout": 30,
+            "statusMessage": "카드뉴스 스튜디오 확인 중"
+          }
+        ]
+      }
+    ]
+  }
+}
