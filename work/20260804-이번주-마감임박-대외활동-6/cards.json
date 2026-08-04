@@ -1,0 +1,82 @@
+{
+  "handle": "erai_log",
+  "style": "02_photo",
+  "source": {
+    "title": "이번 주 마감 임박 대외활동 모음",
+    "publisher": "링커리어"
+  },
+  "caption": "이번 주 마감 임박, 놓치면 아까운 대외활동 6개 모았어요 📌\n\n마감 빠른 순으로 정리했습니다. 자세한 지원 조건과 방법은 각 링크에서 확인하세요.\n\n· D-2 피지컬 AI 제조 AX 캠퍼스 2기 (KG ICT, 국비지원 0원)\nlinkareer.com/activity/331237\n\n· D-5 잡플래닛 커리어 크리에이터 크루\nlinkareer.com/activity/336149\n\n· D-6 넷마블 대학생 서포터즈 마블챌린저 26기\nlinkareer.com/activity/338565\n\n· D-7 유니클로 스타일 크리에이터 4기\nlinkareer.com/activity/338287\n\n· D-8 SBS 고향사랑페스타 대학생 서포터즈\nlinkareer.com/activity/333784\n\n· D-8 대학내일 매거진 학생 리포터 6기\nlinkareer.com/activity/339244\n\n대외활동 소식은 @erai_log 에서 정리해서 올립니다.\n\n출처 · 링커리어\n\n#대외활동 #대외활동추천 #대외활동맞팔 #서포터즈 #마감임박 #대학생 #스펙 #취준 #대외활동정보 #링커리어 #넷마블 #유니클로 #SBS #대학내일",
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "PICK · 8월 1주차",
+      "tags": [
+        "#대외활동",
+        "#마감임박",
+        "#대학생"
+      ],
+      "title": "\n이번 주 마감 임박,\n*놓치면 아까운* 대외활동 6가지",
+      "sub": "*마감 빠른 순*으로만 골랐다 !",
+      "imagePrompt": "A clean minimal desk with a calendar and a highlighted date, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical",
+      "image": "card01_1785828345825.png",
+      "zoom": 1,
+      "scrim": 0.04
+    },
+    {
+      "type": "content",
+      "label": "D-2",
+      "headline": "*0원*으로 배우는 제조 AI",
+      "body": "KG ICT가 여는 국비지원 과정, 훈련장려금도 준다.\n8/6(목)까지 추가등록 받는다.",
+      "imagePrompt": "A clean manufacturing lab desk with a laptop showing abstract charts, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "D-5",
+      "headline": "잡플래닛 *커리어 크리에이터*",
+      "body": "커리어 콘텐츠를 만드는 크루를 모집한다.\n이직·채용 정보를 다루는 잡플래닛 공식 활동이다.",
+      "imagePrompt": "A person writing in a notebook beside a laptop on a bright desk, soft sky blue and white palette, airy natural light, shallow depth of field, no faces, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "D-6",
+      "headline": "넷마블 *대학생 서포터즈*",
+      "body": "게임사 넷마블의 대학생 서포터즈 26기를 모집한다.\n대기업 공식 활동 이력을 남길 수 있다.",
+      "imagePrompt": "A minimal desk with a game controller and a bright monitor glow, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "D-7",
+      "headline": "유니클로 *스타일 크리에이터*",
+      "body": "패션 콘텐츠를 만드는 크리에이터 4기를 모집한다.\n유니클로 매장·제품을 소재로 직접 콘텐츠를 만든다.",
+      "imagePrompt": "A neatly folded stack of plain clothing on a bright minimal shelf, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "D-8",
+      "headline": "SBS *고향사랑페스타* 서포터즈",
+      "body": "SBS와 행정안전부가 함께 여는 서포터즈다.\n방송사 공식 활동으로 이력에 남길 수 있다.",
+      "imagePrompt": "A bright minimal desk with a camera and a small Korean festival lantern prop, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "D-8",
+      "headline": "대학내일 *학생 리포터*",
+      "body": "매거진 학생 리포터 6기를 모집한다.\n콘텐츠 제작 이력을 쌓기 좋다.",
+      "imagePrompt": "A notebook and pen on a bright desk beside a smartphone showing a blank article layout, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "대외활동 소식,\n*여기서* 받아보세요",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": [
+        "#대외활동",
+        "#대외활동맞팔"
+      ]
+    }
+  ]
+}

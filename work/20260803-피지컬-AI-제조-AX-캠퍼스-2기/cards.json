@@ -1,0 +1,89 @@
+{
+  "handle": "erai_log",
+  "style": "01_sky",
+  "source": {
+    "url": "https://linkareer.com/activity/331237",
+    "title": "[모집안내] 피지컬 AI 제조 AX 캠퍼스 2기",
+    "publisher": "링커리어"
+  },
+  "caption": "0원으로 제조 AI 인재 되는 법 🤖\n\n피지컬 AI 제조 AX 캠퍼스 2기, 이미 개강했지만 8/6(목)까지 추가등록 받아요.\n\n· 지원조건 국민내일배움카드 보유(또는 발급 가능)자\n· 비용 전액 무료(국비지원) + 훈련장려금 월 최대 40만원\n· 커리큘럼 420시간, 제조현장 이해→프로그래밍·데이터→센서·설비 실습→AI 프로젝트→발표 (총 12주)\n· 특전 프로젝트 통합 최우수팀 1팀, 2027년 4월 일본 피지컬 AI 전시회 참관(항공·숙박·입장권 전액지원)\n\n⚠️ 전화 인터뷰로 바로 진행되고, 결과는 면접 당일 안내돼요. 최종 등록 마감은 8/6(목)까지입니다.\n\n주최는 고용노동부·대한상공회의소·KG ICT예요.\n\n마감 이틀 남았어요. 지금 확인하세요 🙌\n대외활동 소식은 @erai_log 에서 정리해서 올립니다.\n\n출처 · 링커리어\n\n#대외활동 #국비지원 #국비지원교육 #제조AI #AI교육 #피지컬AI #국민내일배움카드 #대학생 #취업준비 #AI인재 #교육정보 #링커리어",
+  "brief": {
+    "개강일": "2026.8.3(월) — 이미 개강, 추가등록 진행 중",
+    "최종등록마감": "2026.8.6(목)",
+    "지원조건": "국민내일배움카드 보유 및 발급 가능자",
+    "비용": "전액 무료 (교육비 전액 국비 지원)",
+    "훈련장려금": "훈련 중 월 최대 40만원 지급",
+    "커리큘럼": {
+      "총시간": "420시간 (월~금 09:00~18:00)",
+      "1단계": "제조 현장 이해 (1~2주)",
+      "2단계": "프로그래밍 & 데이터 기초 (3~6주)",
+      "3단계": "센서·설비 데이터 실습 (7~10주)",
+      "4단계": "AI 프로젝트 완성 (11~12주)",
+      "5단계": "발표 & 성과 공유 (12주)"
+    },
+    "취업경쟁력프로그램": [
+      "해외 박람회 참관 지원 — 프로젝트 통합 최우수팀 1팀, 2027년 4월 일본 피지컬 AI 전시회, 항공·숙박·입장권 전액지원",
+      "현직자 취업특강",
+      "수료생 전용 취업관 (전용 채용공고·기업정보 제공)",
+      "신입사원 온보딩 교육"
+    ],
+    "지원방법": "비대면 전화 인터뷰, 결과는 면접 당일 안내",
+    "주최": "고용노동부, 대한상공회의소, KG ICT"
+  },
+  "cards": [
+    {
+      "type": "cover",
+      "eyebrow": "EDU · D-2",
+      "tags": ["#국비지원", "#AI교육", "#제조AI"],
+      "title": "*0원*으로\n제조 AI 인재 된다",
+      "sub": "피지컬 AI 제조 AX 캠퍼스 2기,\n8/6(목)까지 추가등록",
+      "imagePrompt": "A clean modern manufacturing lab with a robotic arm and monitor showing abstract data charts, soft sky blue and white palette, airy natural light, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "지원조건",
+      "headline": "*국민내일배움카드*만 있으면",
+      "body": "국민내일배움카드를 갖고 있거나 발급받을 수 있으면 된다.\n교육비는 전액 국비로 지원된다.",
+      "imagePrompt": "A minimal desk with a blank ID-style card and a laptop, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "혜택",
+      "headline": "월 *40만원*까지 준다",
+      "body": "교육비는 0원, 훈련장려금을 월 최대 40만원 지급한다.\n실무 중심 교육으로 취업역량까지 키운다.",
+      "imagePrompt": "A clean desk with a small stack of Korean won coins and a notebook, soft sky blue and white palette, bright airy natural light, minimal composition, shallow depth of field, no text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "커리큘럼",
+      "headline": "*420시간*, 5단계로",
+      "body": "제조 현장 이해부터 AI 프로젝트 완성까지 12주다.\n프로그래밍, 센서·설비 데이터 실습을 현장 중심으로 배운다.",
+      "imagePrompt": "A minimal desk calendar with weeks softly marked, blurred bright office window in the background, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "특전",
+      "headline": "우수팀은 *일본*으로 간다",
+      "body": "프로젝트 통합 최우수팀 1팀에게 2027년 4월 일본 피지컬 AI 전시회 참관 기회를 준다.\n항공·숙박·입장권을 전액 지원한다.",
+      "imagePrompt": "A boarding pass and passport laid neatly on a bright desk beside a small airplane model, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "content",
+      "label": "지원방법",
+      "headline": "전화 인터뷰로 *바로*",
+      "body": "비대면 전화 인터뷰로 진행되고, 결과는 면접 당일 안내된다.\n최종 등록 마감은 8월 6일(목)까지다.",
+      "imagePrompt": "A hand holding a smartphone mid-call on a clean minimal desk, soft sky blue and white palette, airy natural light, shallow depth of field, no readable text, no letters, no logos, editorial photography, 4:5 vertical"
+    },
+    {
+      "type": "cta",
+      "eyebrow": "FOLLOW",
+      "headline": "대외활동 소식,\n*여기서* 받아보세요",
+      "profile": {
+        "name": "에라이 | 대외활동 기록",
+        "handle": "erai_log",
+        "bio": "대외활동 · 서포터즈 · 공모전\n마감 전에 미리 정리해서 올려요"
+      },
+      "tags": ["#대외활동", "#대외활동맞팔"]
+    }
+  ]
+}
